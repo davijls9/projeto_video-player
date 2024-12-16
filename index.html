@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Player Home</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome to the Video Player</h1>
+        </header>
+
+        <section class="upload-section">
+            <h2>Upload Your Video</h2>
+            <form action="/" method="post" enctype="multipart/form-data">
+                <input type="file" name="video" accept="video/*" required>
+                <button type="submit">Upload</button>
+            </form>
+        </section>
+
+        <section class="video-list-section">
+            <h2>Available Videos</h2>
+            <ul>
+                <!-- Links to videos will be dynamically inserted here -->
+                {{videos}}
+            </ul>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 Video Player</p>
+        </footer>
+    </div>
+</body>
+</html>

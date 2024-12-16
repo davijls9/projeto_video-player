@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Video Player</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="upload-container">
+        <h1>Upload Your Video</h1>
+        <form action="/" method="post" enctype="multipart/form-data" class="upload-form">
+            <input type="file" name="video" accept="video/*" required>
+            <button type="submit">Upload</button>
+        </form>
+
+        <h2>Available Videos</h2>
+        <ul class="video-list">
+            <!-- Os itens serão gerados dinamicamente pelo servidor Node.js -->
+            {{videos}}
+        </ul>
+    </div>
+</body>
+</html>
